@@ -1,0 +1,26 @@
+{
+    "name": "cell-assembly",
+    "displayName": "cell-assembly",
+    "description": "Support extension for Cell Lenguage",
+    "version": "0.0.1",
+    "publisher": "cntdwn",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "cell",
+            "aliases": ["Cell", "cell"],
+            "extensions": [".cell"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "cell",
+            "scopeName": "source.cell",
+            "path": "./syntaxes/cell.tmLanguage.json"
+        }]
+    }
+}
