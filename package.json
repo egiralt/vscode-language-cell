@@ -1,15 +1,20 @@
 {
-    "name": "cell-assembly",
-    "displayName": "cell-assembly",
-    "description": "Support extension for Cell Lenguage",
+    "name": "vcode-cell-language",
+    "displayName": "Cell",
+    "description": "Support extension for Cell language",
     "version": "0.0.1",
     "publisher": "cntdwn",
+    "author": "Ernesto Giralt <egiralt@gmail.com>",
     "engines": {
         "vscode": "^1.5.0"
     },
     "categories": [
         "Languages"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:egiralt/vscode-language-cell.git"
+    },
     "contributes": {
         "languages": [
             {
