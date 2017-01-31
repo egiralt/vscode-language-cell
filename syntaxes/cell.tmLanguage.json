@@ -82,7 +82,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cell",
-					"match": "\\b(POKE|PEEK|CLR)\\b"
+					"match": "\\b(POKE|PEEK|CLR|SETAP|SETDP)\\b"
 				}
 			]
 		},
@@ -98,7 +98,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cell",
-					"match": "\\b(JMP|JMPNZ|JMPNE|JMPE|JMPG|JMPGE|CMP)\\b"
+					"match": "\\b(JMP|JMPNZ|JMPNE|JMPE|JMPG|JMPGE|CMP|FORK|WAIT)\\b"
 				}
 			]
 		},
