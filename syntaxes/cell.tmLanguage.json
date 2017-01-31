@@ -3,21 +3,115 @@
 	"name": "Cell",
 	"patterns": [
 		{
-			"include": "#keywords"
+			"include": "#decimal"
+		},
+		{
+			"include": "#hex"
+		},
+		{
+			"include": "#keywords-memory"
+		},
+		{
+			"include": "#keywords-math"
+		},
+		{
+			"include": "#keywords-conditional"
+		},
+		{
+			"include": "#keywords-receptors"
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#structures"
+		},
+		{
+			"include": "#markers"
 		}
 	],
 	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.cell",
-				"match": "\\b(poke|peek|clr|declr|incr)\\b"
-			}]
+		"variable": {
+			"patterns": [
+				{
+					"name": "variable",
+					"match": "\\b[a-zA-Z]+\\b"
+				}
+			]
+		},
+		"hex": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b0x[0-9a-fA-F]+\\b"
+				}
+			]
+		},
+		"decimal": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b[0-9\\+\\-e\\.]+\\b"
+				}
+			]
+		},
+		"structures": {
+			"patterns": [
+				{
+					"match": "^\\s*(STRUCT)\\s+([_$[:alpha:]][_$[:alnum:]]*)?\\s*",
+					"captures": {
+						"1": {
+							"name": "storage.type.function.cell"
+						},
+						"2": {
+							"name": "entity.name.function.cell"
+						}
+					}
+				}
+			]
+		},
+		"markers": {
+			"patterns": [
+				{
+					"name": "constant.language.cell",
+					"match": "\\s?(\\.ENTRY|\\.RET|\\.INHIBIT)\\b"
+				}
+			]
+		},
+		"keywords-memory": {
+			"patterns": [
+				{
+					"name": "keyword.control.cell",
+					"match": "\\b(POKE|PEEK|CLR)\\b"
+				}
+			]
+		},
+		"keywords-math": {
+			"patterns": [
+				{
+					"name": "keyword.control.cell",
+					"match": "\\b(DECR|INCR|ADD|SUB|MUL|DIV|MOD|AND|XOR|OR)\\b"
+				}
+			]
+		},
+		"keywords-conditional": {
+			"patterns": [
+				{
+					"name": "keyword.control.cell",
+					"match": "\\b(JMP|JMPNZ|JMPNE|JMPE|JMPG|JMPGE|CMP)\\b"
+				}
+			]
+		},
+		"keywords-receptors": {
+			"patterns": [
+				{
+					"name": "keyword.control.cell",
+					"match": "\\b(READR|STOR|NEWR)\\b"
+				}
+			]
 		},
 		"strings": {
-			"name": "string.quoted.double.cell",
+			"name": "string.unquoted.cell",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
@@ -28,5 +122,5 @@
 			]
 		}
 	},
-	"scopeName": "source.cell"
+	"scopeName": "source.assembly.cell"
 }

@@ -11,16 +11,25 @@
         "Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "cell",
-            "aliases": ["Cell", "cell"],
-            "extensions": [".cell"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "cell",
-            "scopeName": "source.cell",
-            "path": "./syntaxes/cell.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "cell",
+                "aliases": [
+                    "Cell",
+                    "cell"
+                ],
+                "extensions": [
+                    ".cell"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "cell",
+                "scopeName": "source.assembly.cell",
+                "path": "./syntaxes/cell.tmLanguage.json"
+            }
+        ]
     }
 }
