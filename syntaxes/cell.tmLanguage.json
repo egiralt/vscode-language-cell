@@ -9,6 +9,9 @@
 			"include": "#hex"
 		},
 		{
+			"include": "#labels"
+		},
+		{
 			"include": "#keywords-memory"
 		},
 		{
@@ -18,7 +21,16 @@
 			"include": "#keywords-conditional"
 		},
 		{
-			"include": "#keywords-receptors"
+			"include": "#keywords-chromosomes"
+		},
+		{
+			"include": "#keywords-process"
+		},
+		{
+			"include": "#keywords-registers-counters"
+		},
+		{
+			"include": "#keywords-messages"
 		},
 		{
 			"include": "#strings"
@@ -47,6 +59,14 @@
 				}
 			]
 		},
+		"labels": {
+			"patterns": [
+				{
+					"name": "markup.bold",
+					"match": "(^\\:[a-zA-Z_]+|\\@[a-zA-Z_]+)"
+				}
+			]
+		},
 		"decimal": {
 			"patterns": [
 				{
@@ -70,11 +90,19 @@
 				}
 			]
 		},
+		"registers": {
+			"patterns": [
+				{
+					"name": "support.variable.register.cell",
+					"match": "\\b(SP|TP|CC|RC)\\b"
+				}
+			]
+		},
 		"markers": {
 			"patterns": [
 				{
 					"name": "constant.language.cell",
-					"match": "\\s?(\\.ENTRY|\\.RET|\\.INHIBIT)\\b"
+					"match": "\\s?(\\.ENTRY|\\.RET|\\.INHIBIT|\\.DECLR)\\b"
 				}
 			]
 		},
@@ -82,7 +110,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cell",
-					"match": "\\b(POKE|PEEK|CLR|SETAP|SETDP)\\b"
+					"match": "\\b(POKE|PEEK|CLR|NPOKE|NPEEK|ALLOC)\\b"
 				}
 			]
 		},
@@ -98,15 +126,39 @@
 			"patterns": [
 				{
 					"name": "keyword.control.cell",
-					"match": "\\b(JMP|JMPNZ|JMPNE|JMPE|JMPG|JMPGE|CMP|FORK|WAIT)\\b"
+					"match": "\\b(JMP|JMPZ|JMPNZ|JMPNE|JMPE|JMPG|JMPGE|CMP|FORK)\\b"
 				}
 			]
 		},
-		"keywords-receptors": {
+		"keywords-chromosomes": {
 			"patterns": [
 				{
 					"name": "keyword.control.cell",
-					"match": "\\b(READR|STOR|NEWR)\\b"
+					"match": "\\b(OCHDR)\\b"
+				}
+			]
+		},
+		"keywords-process": {
+			"patterns": [
+				{
+					"name": "keyword.control.cell",
+					"match": "\\b(WEVENT|PRIVLG)\\b"
+				}
+			]
+		},
+		"keywords-registers-counters": {
+			"patterns": [
+				{
+					"name": "keyword.control.cell",
+					"match": "\\b(ZERO|INCRC|DECRC|SHIFT|ORCPT)\\b"
+				}
+			]
+		},
+		"keywords-messages": {
+			"patterns": [
+				{
+					"name": "keyword.control.cell",
+					"match": "\\b(DMESG|WMHDR)\\b"
 				}
 			]
 		},
