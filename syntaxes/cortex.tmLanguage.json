@@ -1,6 +1,6 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Cell",
+	"name": "cortex",
 	"patterns": [
 		{
 			"include": "#decimal"
@@ -81,10 +81,10 @@
 					"match": "^\\s*(STRUCT)\\s+([_$[:alpha:]][_$[:alnum:]]*)?\\s*",
 					"captures": {
 						"1": {
-							"name": "storage.type.function.cell"
+							"name": "storage.type.function.cortex"
 						},
 						"2": {
-							"name": "entity.name.function.cell"
+							"name": "entity.name.function.cortex"
 						}
 					}
 				}
@@ -93,7 +93,7 @@
 		"registers": {
 			"patterns": [
 				{
-					"name": "support.variable.register.cell",
+					"name": "support.variable.register.cortex",
 					"match": "\\b(SP|TP|CC|RC)\\b"
 				}
 			]
@@ -101,7 +101,7 @@
 		"markers": {
 			"patterns": [
 				{
-					"name": "constant.language.cell",
+					"name": "constant.language.cortex",
 					"match": "\\s?(\\.ENTRY|\\.RET|\\.INHIBIT|\\.DECLR)\\b"
 				}
 			]
@@ -109,7 +109,7 @@
 		"keywords-memory": {
 			"patterns": [
 				{
-					"name": "keyword.control.cell",
+					"name": "keyword.control.cortex",
 					"match": "\\b(POKE|PEEK|CLR|NPOKE|NPEEK|ALLOC)\\b"
 				}
 			]
@@ -117,7 +117,7 @@
 		"keywords-math": {
 			"patterns": [
 				{
-					"name": "keyword.control.cell",
+					"name": "keyword.control.cortex",
 					"match": "\\b(DECR|INCR|ADD|SUB|MUL|DIV|MOD|AND|XOR|OR)\\b"
 				}
 			]
@@ -125,7 +125,7 @@
 		"keywords-conditional": {
 			"patterns": [
 				{
-					"name": "keyword.control.cell",
+					"name": "keyword.control.cortex",
 					"match": "\\b(JMP|JMPZ|JMPNZ|JMPNE|JMPE|JMPG|JMPGE|CMP|FORK)\\b"
 				}
 			]
@@ -133,7 +133,7 @@
 		"keywords-chromosomes": {
 			"patterns": [
 				{
-					"name": "keyword.control.cell",
+					"name": "keyword.control.cortex",
 					"match": "\\b(OCHDR)\\b"
 				}
 			]
@@ -141,7 +141,7 @@
 		"keywords-process": {
 			"patterns": [
 				{
-					"name": "keyword.control.cell",
+					"name": "keyword.control.cortex",
 					"match": "\\b(WEVENT|PRIVLG)\\b"
 				}
 			]
@@ -149,7 +149,7 @@
 		"keywords-registers-counters": {
 			"patterns": [
 				{
-					"name": "keyword.control.cell",
+					"name": "keyword.control.cortex",
 					"match": "\\b(ZERO|INCRC|DECRC|SHIFT|ORCPT)\\b"
 				}
 			]
@@ -157,22 +157,22 @@
 		"keywords-messages": {
 			"patterns": [
 				{
-					"name": "keyword.control.cell",
+					"name": "keyword.control.cortex",
 					"match": "\\b(DMESG|WMHDR)\\b"
 				}
 			]
 		},
 		"strings": {
-			"name": "string.unquoted.cell",
+			"name": "string.unquoted.cortex",
 			"begin": "\"",
 			"end": "\"",
 			"patterns": [
 				{
-					"name": "constant.character.escape.cell",
+					"name": "constant.character.escape.cortex",
 					"match": "\\\\."
 				}
 			]
 		}
 	},
-	"scopeName": "source.assembly.cell"
+	"scopeName": "source.assembly.cortex"
 }

@@ -1,7 +1,7 @@
 {
-    "name": "vcode-cell-language",
-    "displayName": "Cell",
-    "description": "Support extension for Cell language",
+    "name": "vcode-cortex-language",
+    "displayName": "Cortex",
+    "description": "Support extension for Cortex language",
     "version": "0.0.1",
     "publisher": "cntdwn",
     "author": "Ernesto Giralt <egiralt@gmail.com>",
@@ -18,22 +18,22 @@
     "contributes": {
         "languages": [
             {
-                "id": "cell",
+                "id": "cortex",
                 "aliases": [
-                    "Cell",
-                    "cell"
+                    "Cortex",
+                    "cortex"
                 ],
                 "extensions": [
-                    ".cell"
+                    ".ctex"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "cell",
-                "scopeName": "source.assembly.cell",
-                "path": "./syntaxes/cell.tmLanguage.json"
+                "language": "cortex",
+                "scopeName": "source.assembly.cortex",
+                "path": "./syntaxes/cortex.tmLanguage.json"
             }
         ]
     }
